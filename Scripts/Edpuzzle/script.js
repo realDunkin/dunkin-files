@@ -1,12 +1,7 @@
 var popup = null;
-var base_url;
-if (typeof document.dev_env != "undefined") {
-  base_url = document.dev_env;
-}
-else {
-  //get resources off of github to not inflate the jsdelivr stats
+var base_url;
+//get resources off of github to not inflate the jsdelivr stats
   base_url = "https://raw.githubusercontent.com/ading2210/edpuzzle-answers/main";
-}
 
 function http_get(url, callback, headers=[], method="GET", content=null) {
   var request = new XMLHttpRequest();
